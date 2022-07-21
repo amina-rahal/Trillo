@@ -12,6 +12,11 @@
     background-color: #fff;
     border-bottom: var(--color-Grey-light-1);
     color: black;
+    font-size: 1.4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {

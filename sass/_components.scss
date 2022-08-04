@@ -113,15 +113,28 @@
 
 // side navigation
 .side-nav {
-     font-size: 1.4rem;
-     list-style: none;
-     margin-top: 3.5rem;
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
 
-     &__item {
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
+    &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
 
@@ -148,7 +161,7 @@
     &__item:active::before {
         background-color: var(--color-Primary-light);
     }
-
+    
     &__link:link,
     &__link:visited {
         color: var(--color-Grey-light-1);
@@ -160,6 +173,11 @@
         position: relative;
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &__icon {
@@ -176,6 +194,10 @@
     color: var(--color-Grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 .gallery {
@@ -192,7 +214,7 @@
     align-items: center;
     border-bottom: 1px solid var(--color-Grey-light-1);
     
-    &__heading {
+    &__heading {  
         font-size: 2.25rem;
         font-weight: 300;
         text-transform: uppercase;
@@ -348,7 +370,7 @@
     }
 
     &__friends {
-
+        display: flex  ;
     }
 
     &__photo {
@@ -359,7 +381,7 @@
         border: 3px solid #FFF;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -373,6 +395,11 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -431,6 +458,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 2rem;
